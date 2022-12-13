@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend" : "cd frontend && npm start",
     "backend" : "cd backend && npm start",
-    "dev" : "concurrently \"npm run frontend\" \"npm run backend\""
+    "dev" : "concurrently \"npm run frontend\" \"npm run backend\"",
+    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
