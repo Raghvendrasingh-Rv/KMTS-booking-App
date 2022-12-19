@@ -8,15 +8,15 @@ import rentRouter from './routes/rentRoute.js';
 import categoryRouter from './routes/typeRoute.js';
 
 const app = express();
-
+const url = 'https://kmts-truck.onrender.com/';
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use('/api/seed/', seedRouter);
-app.use('/api/cars/', carsRouter);
-app.use('/api/users/', userRouter);
-app.use('/api/rent/', rentRouter);
-app.use('/api/category/', categoryRouter);
+app.use(url+'/api/seed/', seedRouter);
+app.use(url+'/api/cars/', carsRouter);
+app.use(url+'/api/users/', userRouter);
+app.use(url+'/api/rent/', rentRouter);
+app.use(url+'/api/category/', categoryRouter);
 
 //Connect to DB
 const DB = 'mongodb+srv://RV:Rv%40123@cluster0.r6cyx6j.mongodb.net/rentcar?retryWrites=true&w=majority';
